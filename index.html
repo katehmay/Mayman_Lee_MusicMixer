@@ -4,28 +4,65 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Siren's Song Music Mixer</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,400&display=swap" rel="stylesheet">
+
 </head>
 <body>
-  <header class="mainTitle">
-      <h1>my awesome music mixer project</h1>
-      <h2>Subhead</h2>
-  </header>
- 
-  <section id="mermaid">
-    <img src="" alt="">
+  <div id="wrapper">
+    <header id="titleintro">
+      <h1>SIREN'S SONG</h1>
+      <h2>Drag & Drop Music Mixer</h2>
+    </header>
+    <section id="droparea">
+      <h3 class="hidden">The Drop Zones</h3>
+      <div class="drop-zone tl"></div>
+      <div class="drop-zone tr"></div>
+      <div class="drop-zone bl"></div>
+      <div class="drop-zone br"></div>
+    </section>
 
-  </section>
-  <section id="clam-color1">
-    <img src="" alt="">
+    <section id="dragsection">
+      <section id="dragboxes">
+      <h3 class="hidden">The Drag Zones</h3>
+      <h3>SYNTH</h3>
+        <div id="box1">
+          <img src="images/box1-1.png" alt="temporary box" class="box1-1" draggable>
+          <img src="images/box1-2.png" alt="temporary box" class="box1-2" draggable>
+          <img src="images/box1-3.png" alt="temporary box" class="box1-3" draggable>
+        </div>
+      </section>
+      <section id="dragboxes">
+      <h3>MAIN VOCALS</h3>
+        <div id="box2">
+          <img src="images/box2-1.png" alt="temporary box" class="box2-1" draggable>
+          <img src="images/box2-2.png" alt="temporary box" class="box2-2" draggable>
+          <img src="images/box2-3.png" alt="temporary box" class="box2-3" draggable>
+        </div>
+      </section>
+      <section id="dragboxes">
+      <h3>SUPPORT VOCALS</h3>
+        <div id="box3">
+          <img src="images/box3-1.png" alt="temporary box" class="box3-1" draggable>
+          <img src="images/box3-2.png" alt="temporary box" class="box3-2" draggable>
+          <img src="images/box3-3.png" alt="temporary box" class="box3-3" draggable>
+        </div>
+      </section>
+      <section id="dragboxes">
+      <h3>GUITAR</h3>
+        <div id="box4">
+          <img src="images/box4-1.png" alt="temporary box" class="box4-1">
+          <img src="images/box4-2.png" alt="temporary box" class="box4-2">
+          <img src="images/box4-3.png" alt="temporary box" class="box4-3">
+        </div>
+      </section>
 
-  </section>
-  <section id="clam-color2">
-    <img src="" alt="">
-  </section>
-  <section id="starfish">
-    <img src="" alt="">
-  </section>
+    </section>
+
+
+</div>
   <script src="js/main.js"></script>
 </body>
 </html>
