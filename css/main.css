@@ -128,7 +128,7 @@ h3{
   flex-direction:row;
 }
 
-#dragboxes {
+#dragboxes, #dragboxes2, # {
   width:25%;
 }
 
