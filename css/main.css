@@ -1,6 +1,7 @@
 body{
   font-family: 'Raleway', sans-serif;
-  background-color:#f0ebe8;
+  background-image:url('../images/bg-ocean.jpg');
+  background-size:cover;
   overflow: hidden;
 }
 
@@ -14,6 +15,7 @@ h1{
   letter-spacing:2px;
   margin-top:33px;
   margin-bottom:7px;
+  color:#fff;
 }
 
 h2{
@@ -21,7 +23,7 @@ h2{
   font-weight:200;
   font-size:1.3em;
   letter-spacing:1px;
-  margin-bottom:15px;
+  color:#fff;
 }
 
 h3{
@@ -29,7 +31,7 @@ h3{
   font-size:1em;
   letter-spacing:1px;
   color:#d5d5d5;
-  margin-top:25px;
+  margin-top:20px;
   margin-bottom:15px;
 }
 
@@ -42,35 +44,59 @@ h3{
 
 #droparea{
   margin:0 auto;
-  margin-top:30px;
   margin-bottom:30px;
-  width:463px;
-  height:385px;
-  background-image:url(../images/mermaidsketch-test.jpg);
+  margin-top:20px;
+  width:500px;
+  height:425px;
+  background-image:url(../images/bg-ferns.png);
+  background-size:contain;
   background-repeat: no-repeat;
   background size:463px 385px;
 }
 
-.tl, .br{text-align:right;}
-.tr img{bottom:0;}
-.tl img{bottom:0; right:0;}
-.bl img{right:0;}
+.left-mermaid{
+  position:relative;
+  float:left;
+  z-index:3;
+  margin-top:65px;
+  margin-left:65px;
+}
 
-/* set up drop zones */
+.right-mermaid{
+  position:relative;
+  float:left;
+  z-index:2;
+  margin-top:60px;
+  margin-left:-70px;
+}
 
-.drop-zone{
-  width:49.5%;
-  height:49.5%;
-  border:1px dashed rgb(162,162,162,0.7);
+.sandbar{
   float:left;
   position:relative;
+  opacity:0.85;
+  z-index:1;
+  margin-top:-160px;
+}
+
+.seahorse{
+  float:left;
+  position:relative;
+  margin-top:-370px;
+  margin-left:90px;
+}
+
+.jellyfish{
+  float:right;
+  position:relative;
+  margin-top:-300px;
+  margin-right:55px;
 }
 
 
 #dragsection{
   width:100%;
   height:290px;
-  background-color:#696969;
+  background-color:rgb(95,27,82,0.65);
   overflow: hidden;
   display:flex;
   flex-direction:row;
