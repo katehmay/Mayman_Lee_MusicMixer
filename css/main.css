@@ -60,12 +60,23 @@ h3{
   z-index:3;
   margin-top:65px;
   margin-left:65px;
+  width:220px;
+  height:300px;
+  background-size:contain;
+  background-repeat:no-repeat;
+  background-image:url('../images/left-mermaid.svg');
+  margin-top:60px;
 }
 
 .right-mermaid{
   position:relative;
   float:left;
   z-index:2;
+  width:180px;
+  height:360px;
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-image:url('../images/right-mermaid.svg');
   margin-top:60px;
   margin-left:-70px;
 }
@@ -75,12 +86,22 @@ h3{
   position:relative;
   opacity:0.85;
   z-index:1;
+  width:490px;
+  height:200px;
+  background-size:contain;
+  background-repeat:no-repeat;
+  background-image:url('../images/sandbar.svg');
   margin-top:-160px;
 }
 
 .seahorse{
   float:left;
   position:relative;
+  z-index:4;
+  width:55px;
+  height:78px;
+  background-size:cover;
+  background-image:url('../images/seahorse.svg');
   margin-top:-370px;
   margin-left:90px;
 }
@@ -88,6 +109,11 @@ h3{
 .jellyfish{
   float:right;
   position:relative;
+  z-index:5;
+  width:65px;
+  height:90px;
+  background-size:cover;
+  background-image:url('../images/jellyfish.svg');
   margin-top:-300px;
   margin-right:55px;
 }
