@@ -3,14 +3,23 @@
   // also called a lambda, if you're into nerd speak
   console.log('working!');
 
-  const dropArea = document.querySelector('#droparea'),
-            dropZones = document.querySelectorAll('.drop-zone'),
-            synths = document.querySelector('#box1'),
-            mainVocals = document.querySelectorAll('#box2'),
-            supportVocals = document.querySelector('#box3'),
-            guitars = document.querySelector('#box4');
+  const dropZones = document.querySelectorAll('.drop-zone'),
+      musicElements = document.querySelectorAll('.box');
 
   let draggablePieces = document.querySelectorAll("img");
+
+
+  function logKeyCode(event) {
+    console.log(event.dataset.key);
+    
+    let currentAudioClip = document.querySelector(`audio[data-key="${event.dataset.key}"]`);
+    currentAudioClip.play()
+  }
+ 
+  musicElements.forEach(element => {
+    element.addEventListener("click", logKeyCode);
+
+  });
 
 
   draggablePieces.forEach(piece => {
@@ -20,14 +29,6 @@
         e.dataTransfer.setData("text/plain", this.id);
     });
   });
-
-  function logKeyCode(event) {
-    console.log(event.keyCode);
-
-   let currentKey = document.querySelector(`img[data-key="${event.keyCode}"]`);
-  }
-
-
 
   dropZones.forEach(zone => {
        zone.addEventListener("dragover", function(e) {
@@ -46,5 +47,6 @@
     
     });
   });
+
 
 })();
