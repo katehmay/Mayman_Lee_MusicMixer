@@ -12,12 +12,6 @@
 
   let draggablePieces = document.querySelectorAll("img");
 
-  
-  function switchImage() {
-		console.log(this);
-	}
-
-	mainVocals.forEach(mainvo => { mainvo.addEventListener("click", switchImage); });
 
   draggablePieces.forEach(piece => {
       piece.addEventListener("dragstart", function(e) {
@@ -26,6 +20,14 @@
         e.dataTransfer.setData("text/plain", this.id);
     });
   });
+
+  function logKeyCode(event) {
+    console.log(event.keyCode);
+
+   let currentKey = document.querySelector(`img[data-key="${event.keyCode}"]`);
+  }
+
+
 
   dropZones.forEach(zone => {
        zone.addEventListener("dragover", function(e) {
@@ -38,7 +40,7 @@
           console.log('drop is working!');
 
           let dragElement = e.dataTransfer.getData("text/plain");
-          console.log('you drgged: ', dragElement);
+          console.log('you dragged: ', dragElement);
 
       e.target.appendChild(document.querySelector(`#${dragElement}`));
     
