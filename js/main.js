@@ -32,6 +32,22 @@
 
     
       e.target.appendChild(document.querySelector(`#${dragElement}`));
+    //   function logKeyCode() {
+    //     console.log(this.dataset.key);
+        
+    //     let currentAudioClip = document.querySelector(`audio[data-key="${this.dataset.key}"]`);
+    //     currentAudioClip.play()
+    //   }
+     
+    //     musicElements.forEach(element => {
+    //       element.addEventListener("click", logKeyCode);
+    
+    // });
+      
+      
+      // let currentAudioClip = document.querySelector(`audio[data-key="${this.dataset.key}"]`);
+      // currentAudioClip.play()
+      // logKeyCode()
     
     });
   });
@@ -41,8 +57,6 @@
     
     let currentAudioClip = document.querySelector(`audio[data-key="${this.dataset.key}"]`);
     currentAudioClip.play()
-
-
   }
  
     musicElements.forEach(element => {
