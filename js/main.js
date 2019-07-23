@@ -9,19 +9,6 @@
   let draggablePieces = document.querySelectorAll("img");
 
 
-  function logKeyCode(event) {
-    console.log(event.dataset.key);
-    
-    let currentAudioClip = document.querySelector(`audio[data-key="${event.dataset.key}"]`);
-    currentAudioClip.play()
-  }
- 
-  musicElements.forEach(element => {
-    element.addEventListener("click", logKeyCode);
-
-  });
-
-
   draggablePieces.forEach(piece => {
       piece.addEventListener("dragstart", function(e) {
         console.log('dragging..!');
@@ -43,10 +30,25 @@
           let dragElement = e.dataTransfer.getData("text/plain");
           console.log('you dragged: ', dragElement);
 
+    
       e.target.appendChild(document.querySelector(`#${dragElement}`));
     
     });
   });
+  
+  function logKeyCode() {
+    console.log(this.dataset.key);
+    
+    let currentAudioClip = document.querySelector(`audio[data-key="${this.dataset.key}"]`);
+    currentAudioClip.play()
+
+
+  }
+ 
+    musicElements.forEach(element => {
+      element.addEventListener("click", logKeyCode);
+
+});
 
 
 })();
