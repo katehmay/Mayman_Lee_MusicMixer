@@ -30,25 +30,47 @@
           let dragElement = e.dataTransfer.getData("text/plain");
           console.log('you dragged: ', dragElement);
 
-    
+
       e.target.appendChild(document.querySelector(`#${dragElement}`));
-    
+
     });
   });
-  
+
   function logKeyCode() {
     console.log(this.dataset.key);
-    
+
     let currentAudioClip = document.querySelector(`audio[data-key="${this.dataset.key}"]`);
     currentAudioClip.play()
 
 
   }
- 
+
     musicElements.forEach(element => {
       element.addEventListener("click", logKeyCode);
 
 });
+
+// Modal begins here
+
+    var modal = document.getElementById("modal-box");
+
+    var btn = document.getElementById("modal-button");
+
+    var span = document.getElementsByClassName("close")[0];
+
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
 
 
 })();
