@@ -16,6 +16,9 @@
       <h1>SIREN'S SONG</h1>
       <h2>Drag & Drop Music Mixer</h2>
     </header>
+
+    <!-- DROP ZONE BEGINS HERE -->
+
     <section id="droparea">
       <h3 class="hidden">The Drop Zones</h3><br>
       <div class="drop-zone tl">
@@ -27,62 +30,92 @@
       </div>
     </section>
 
+    <!-- HELP MODAL OVERLAY BEGINS HERE -->
+
+    <section id="modal-button">
+      <img src="images/modal-button.svg" height="30" width="30">
+      <div id="modal-box" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>Welcome to Siren's Song!</p><br>
+          <p>Siren's Song is a javascript-based audio mixer with drag & drop capabilities.<br>
+          To play mix the siren's song, drag a seashell onto the artwork zone above.</p><br>
+          <p>Designed by Kateh Mayman and developed by Stella Lee!
+          <br>Music tracks by <a href="https://samples.landr.com/samples/packs/strawberries/">MUNYA</a>.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- DRAG ZONE BEGINS HERE -->
+
     <div class="keys">
     <section id="dragsection">
       <section id="dragboxes">
       <h3 class="hidden">The Drag Zones</h3>
+
+      <!--       SYNTH MUSIC     -->
+
       <h3>SYNTH</h3>
         <div id="box1">
-          <img data-key="56" id="synth0" src="images/box1-1.png" alt="temporary box" class="box" draggable="true">
-          <img data-key="66" id="synth1" src="images/box1-2.png" alt="temporary box" class="box" draggable="true">
-          <img data-key="76" id="synth2" src="images/box1-3.png" alt="temporary box" class="box" draggable="true">  
+          <img data-key="56" id="synth0" src="images/button1-1.svg" alt="temporary box" class="box" draggable="true">
+          <img data-key="66" id="synth1" src="images/button1-2.svg" alt="temporary box" class="box" draggable="true">
+          <img data-key="76" id="synth2" src="images/button1-3.svg" alt="temporary box" class="box" draggable="true">
         </div>
         </section>
       <section id="dragboxes2">
+
+      <!--       MAIN VOCALS    -->
+
       <h3>MAIN VOCALS</h3>
         <div id="box2">
-          <img data-key="57" id="main0" src="images/box2-1.png" alt="temporary box" class="box" draggable="true">
-          <img data-key="67" id="main1" src="images/box2-2.png" alt="temporary box" class="box" draggable="true">
-          <img data-key="76" id="main2" src="images/box2-3.png" alt="temporary box" class="box" draggable="true">
+          <img data-key="57" id="main0" src="images/button2-1.svg" alt="temporary box" class="box" draggable="true">
+          <img data-key="67" id="main1" src="images/button2-2.svg" alt="temporary box" class="box" draggable="true">
+          <img data-key="76" id="main2" src="images/button2-3.svg" alt="temporary box" class="box" draggable="true">
         </div>
       </section>
       <section id="dragboxes3">
+
+        <!--       SUPPORT VOCALS     -->
+
       <h3>SUPPORT VOCALS</h3>
         <div id="box3">
-          <img data-key="58" id="support0" src="images/box3-1.png" alt="temporary box" class="box" draggable="true">
-          <img data-key="68" id="support1" src="images/box3-2.png" alt="temporary box" class="box" draggable="true">
-          <img data-key="78" id="support2" src="images/box3-3.png" alt="temporary box" class="box" draggable="true">
+          <img data-key="58" id="support0" src="images/button3-1.svg" alt="temporary box" class="box" draggable="true">
+          <img data-key="68" id="support1" src="images/button3-2.svg" alt="temporary box" class="box" draggable="true">
+          <img data-key="78" id="support2" src="images/button3-3.svg" alt="temporary box" class="box" draggable="true">
         </div>
       </section>
       <section id="dragboxes4">
+
+        <!--       GUITAR MUSIC     -->
+
       <h3>GUITAR</h3>
         <div id="box4">
-          <img data-key="59" id="guitar0" src="images/box4-1.png" alt="temporary box" class="box" draggable="true">
-          <img data-key="69" id="guitar1" src="images/box4-2.png" alt="temporary box" class="box" draggable="true">
-          <img data-key="79" id="guitar2" src="images/box4-3.png" alt="temporary box" class="box" draggable="true">
+          <img data-key="59" id="guitar0" src="images/button4-1.svg" alt="temporary box" class="box" draggable="true">
+          <img data-key="69" id="guitar1" src="images/button4-2.svg" alt="temporary box" class="box" draggable="true">
+          <img data-key="79" id="guitar2" src="images/button4-3.svg" alt="temporary box" class="box" draggable="true">
         </div>
       </section>
     </section>
 </div>
 
+<!--       AUDIO DATA KEYS       -->
+
 <audio data-key="56" src="audio/Synth/Synth_01.wav"></audio>
 <audio data-key="66" src="audio/Synth/Synth_02.wav"></audio>
 <audio data-key="76" src="audio/Synth/Synth_03.wav"></audio>
-<audio data-key="57" src="audio/MainVocal/MainVoice_01.wav"> </audio>
+
+<audio data-key="57" src="audio/MainVocal/MainVoice_01.wav"></audio>
 <audio data-key="67" src="audio/MainVocal/MainVoice_02.wav"></audio>
 <audio data-key="77" src="audio/MainVocal/MainVoice_03.wav"></audio>
+
 <audio data-key="58" src="audio/SupportVocals/SupportVoice_01.wav"></audio>
 <audio data-key="68" src="audio/SupportVocals/SupportVoice_02.wav"></audio>
 <audio data-key="78" src="audio/SupportVocals/SupportVoice_03.wav"></audio>
+
 <audio data-key="59" src="audio/Guitar/Guitar_01.wav"></audio>
 <audio data-key="69" src="audio/Guitar/Guitar_02/Guitar_02-1.wav"></audio>
 <audio data-key="79" src="audio/Guitar/Guitar_03/Guitar_03-1.wav"></audio>
-
-
-
-
-
-
 
 </div>
   <script src="js/main.js"></script>
