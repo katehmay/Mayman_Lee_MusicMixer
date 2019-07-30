@@ -2,8 +2,7 @@
   // Drag and Drop 
   console.log('working!');
 
-  const dropZones = document.querySelectorAll('.drop-zone'),
-      musicElements = document.querySelectorAll('.box');
+  const dropZones = document.querySelectorAll('.drop-zone');
 
   let draggablePieces = document.querySelectorAll("img");
 
@@ -33,7 +32,7 @@
           
           let currentAudioClip = document.querySelector((`audio[data-key="${audioKey}"]`));
           currentAudioClip.play();
-          currentAudioCilp.loop = "true";
+          currentAudioClip.loop = "true";
 
           e.target.appendChild(document.querySelector(`#${dragElement}`));
 
