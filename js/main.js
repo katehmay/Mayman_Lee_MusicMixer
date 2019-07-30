@@ -27,6 +27,8 @@
 
           let dragElement = e.dataTransfer.getData("text/plain");
           console.log('you dragged: ', dragElement);
+          
+          if ( this.childElementCount == 1 ) { return; }
 
           let audioKey = document.querySelector(`#${dragElement}`).dataset.key;
           
