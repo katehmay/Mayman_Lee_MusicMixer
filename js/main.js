@@ -5,7 +5,8 @@
   const dropZones = document.querySelectorAll('.drop-zone');
 
   let draggablePieces = document.querySelectorAll("img"),
-      resetBut = document.querySelector("#reset");
+      resetBut = document.querySelector("#reset"),
+      modalBox = document.querySelector("#modal-box");
 
 
   draggablePieces.forEach(piece => {
@@ -65,25 +66,33 @@
 
 // Modal begins here
 
-    var modal = document.getElementById("modal-box");
 
-    var btn = document.getElementById("#modal-button img");
 
-    var span = document.getElementsByClassName("close")[0];
+  function popInfoBox() {
+    modalBox.classList.add('open-modal-box');
+  }
 
-    btn.onclick = function() {
-      modal.style.display = "block";
-    }
 
-    span.onclick = function() {
-      modal.style.display = "none";
-    }
+  modalBox.addEventListener("click", popInfoBox)
+    // var modal = document.getElementById("modal-box");
 
-    window.onclick = function(event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
+    // var btn = document.getElementById("#modal-button img");
+
+    // var span = document.getElementsByClassName("close")[0];
+
+    // btn.onclick = function() {
+    //   modal.style.display = "block";
+    // }
+
+    // span.onclick = function() {
+    //   modal.style.display = "none";
+    // }
+
+    // window.onclick = function(event) {
+    //   if (event.target == modal) {
+    //     modal.style.display = "none";
+    //   }
+    // }
 
 
 })();
