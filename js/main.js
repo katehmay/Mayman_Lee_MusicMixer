@@ -4,9 +4,7 @@
 
   const dropZones = document.querySelectorAll('.drop-zone');
 
-  let draggablePieces = document.querySelectorAll("img"),
-      resetBut = document.querySelector("#reset"),
-      modalBox = document.querySelector("#modal-box");
+  let draggablePieces = document.querySelectorAll("img");
 
 
   draggablePieces.forEach(piece => {
@@ -43,14 +41,7 @@
     });
   });
 
-
-  function resetRound() {
-    draggablePieces.reset();
-  }
-
-  resetBut.addEventListener("click", resetRound);
-
-  debugger;
+  // debugger;
 //   function logKeyCode() {
 //     console.log(this.dataset.key);
 
@@ -68,31 +59,32 @@
 
 
 
-  function popInfoBox() {
-    modalBox.classList.add('open-modal-box');
-  }
+//   function popInfoBox() {
+//     modalBox.classList.add('open-modalContent');
+//   }
 
 
-  modalBox.addEventListener("click", popInfoBox)
-    // var modal = document.getElementById("modal-box");
+//  modalBut.addEventListener("click", popInfoBox)
 
-    // var btn = document.getElementById("#modal-button img");
+    var modal = document.getElementById("modal-box");
 
-    // var span = document.getElementsByClassName("close")[0];
+    var btn = document.querySelector("#modal-button img");
 
-    // btn.onclick = function() {
-    //   modal.style.display = "block";
-    // }
+    var span = document.getElementsByClassName("close")[0];
 
-    // span.onclick = function() {
-    //   modal.style.display = "none";
-    // }
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
 
-    // window.onclick = function(event) {
-    //   if (event.target == modal) {
-    //     modal.style.display = "none";
-    //   }
-    // }
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
 
 
 })();
