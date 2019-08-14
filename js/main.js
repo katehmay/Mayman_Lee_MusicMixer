@@ -4,7 +4,8 @@
 
   const dropZones = document.querySelectorAll('.drop-zone');
 
-  let draggablePieces = document.querySelectorAll("img");
+  let draggablePieces = document.querySelectorAll("img"),
+      resetBut = document.querySelector("#reset");
 
 
   draggablePieces.forEach(piece => {
@@ -41,6 +42,14 @@
     });
   });
 
+
+  function resetRound() {
+    draggablePieces.reset();
+  }
+
+  resetBut.addEventListener("click", resetRound);
+
+  debugger;
 //   function logKeyCode() {
 //     console.log(this.dataset.key);
 
@@ -58,7 +67,7 @@
 
     var modal = document.getElementById("modal-box");
 
-    var btn = document.getElementById("modal-button");
+    var btn = document.getElementById("#modal-button img");
 
     var span = document.getElementsByClassName("close")[0];
 
