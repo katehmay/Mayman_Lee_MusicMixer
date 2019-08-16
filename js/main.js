@@ -35,8 +35,37 @@
           let currentAudioClip = document.querySelector((`audio[data-key="${audioKey}"]`));
           currentAudioClip.play();
           currentAudioClip.loop = "true";
-
-          e.target.appendChild(document.querySelector(`#${dragElement}`));
+    
+      e.target.appendChild(document.querySelector(`#${dragElement}`));
+    //   function logKeyCode() {
+    //     console.log(this.dataset.key);
+        
+    //     let currentAudioClip = document.querySelector(`audio[data-key="${this.dataset.key}"]`);
+    //     currentAudioClip.play()
+    //   }
+     
+    //     musicElements.forEach(element => {
+    //       element.addEventListener("click", logKeyCode);
+    
+    // });
+      
+      
+      // let currentAudioClip = document.querySelector(`audio[data-key="${this.dataset.key}"]`);
+      // currentAudioClip.play()
+      // logKeyCode()
+    
+    });
+  });
+  
+  function logKeyCode() {
+    console.log(this.dataset.key);
+    
+    let currentAudioClip = document.querySelector(`audio[data-key="${this.dataset.key}"]`);
+    currentAudioClip.play()
+  }
+ 
+    musicElements.forEach(element => {
+      element.addEventListener("click", logKeyCode);
 
     });
   });
