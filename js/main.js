@@ -36,23 +36,7 @@
           currentAudioClip.play();
           currentAudioClip.loop = "true";
 
-      e.target.appendChild(document.querySelector(`#${dragElement}`));
-    //   function logKeyCode() {
-    //     console.log(this.dataset.key);
-
-    //     let currentAudioClip = document.querySelector(`audio[data-key="${this.dataset.key}"]`);
-    //     currentAudioClip.play()
-    //   }
-
-    //     musicElements.forEach(element => {
-    //       element.addEventListener("click", logKeyCode);
-
-    // });
-
-
-      // let currentAudioClip = document.querySelector(`audio[data-key="${this.dataset.key}"]`);
-      // currentAudioClip.play()
-      // logKeyCode()
+          e.target.appendChild(document.querySelector(`#${dragElement}`));
 
     });
   });
@@ -70,6 +54,7 @@
     });
   });
 
+
   // debugger;
 //   function logKeyCode() {
 //     console.log(this.dataset.key);
@@ -84,27 +69,17 @@
 
 // });
 
-// Modal begins here
 
+  // debugger;
+//   function logKeyCode() {
+//     console.log(this.dataset.key);
 
-(() => {
+//     let currentAudioClip = document.querySelector(`audio[data-key="${this.dataset.key}"]`);
+//     currentAudioClip.play()
 
-  console.log('working!');
+//   }
 
-  let modalBtn = document.getElementById("modal-button")
-  let modal = document.querySelector(".modal")
-  let closeBtn = document.querySelector(".close")
+//     musicElements.forEach(element => {
+//       element.addEventListener("click", logKeyCode);
 
-  modalBtn.onclick = function(){
-    modal.style.display = "block"
-  }
-  closeBtn.onclick = function(){
-    modal.style.display = "none"
-  }
-  window.onclick = function(e){
-    if(e.target == modal){
-      modal.style.display = "none"
-    }
-  }
-
-})();
+// });
