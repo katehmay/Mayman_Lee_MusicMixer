@@ -1,5 +1,5 @@
 (() => {
-  // Drag and Drop 
+  // Drag and Drop
   console.log('working!');
 
   const dropZones = document.querySelectorAll('.drop-zone');
@@ -27,43 +27,43 @@
 
           let dragElement = e.dataTransfer.getData("text/plain");
           console.log('you dragged: ', dragElement);
-          
+
           if ( this.childElementCount == 1 ) { return; }
 
           let audioKey = document.querySelector(`#${dragElement}`).dataset.key;
-          
+
           let currentAudioClip = document.querySelector((`audio[data-key="${audioKey}"]`));
           currentAudioClip.play();
           currentAudioClip.loop = "true";
-    
+
       e.target.appendChild(document.querySelector(`#${dragElement}`));
     //   function logKeyCode() {
     //     console.log(this.dataset.key);
-        
+
     //     let currentAudioClip = document.querySelector(`audio[data-key="${this.dataset.key}"]`);
     //     currentAudioClip.play()
     //   }
-     
+
     //     musicElements.forEach(element => {
     //       element.addEventListener("click", logKeyCode);
-    
+
     // });
-      
-      
+
+
       // let currentAudioClip = document.querySelector(`audio[data-key="${this.dataset.key}"]`);
       // currentAudioClip.play()
       // logKeyCode()
-    
+
     });
   });
-  
+
   function logKeyCode() {
     console.log(this.dataset.key);
-    
+
     let currentAudioClip = document.querySelector(`audio[data-key="${this.dataset.key}"]`);
     currentAudioClip.play()
   }
- 
+
     musicElements.forEach(element => {
       element.addEventListener("click", logKeyCode);
 
@@ -87,33 +87,24 @@
 // Modal begins here
 
 
+(() => {
 
-//   function popInfoBox() {
-//     modalBox.classList.add('open-modalContent');
-//   }
+  console.log('working!');
 
+  let modalBtn = document.getElementById("modal-button")
+  let modal = document.querySelector(".modal")
+  let closeBtn = document.querySelector(".close")
 
-//  modalBut.addEventListener("click", popInfoBox)
-
-    var modal = document.getElementById("modal-box");
-
-    var btn = document.querySelector("#modal-button img");
-
-    var span = document.getElementsByClassName("close")[0];
-
-    btn.onclick = function() {
-      modal.style.display = "block";
+  modalBtn.onclick = function(){
+    modal.style.display = "block"
+  }
+  closeBtn.onclick = function(){
+    modal.style.display = "none"
+  }
+  window.onclick = function(e){
+    if(e.target == modal){
+      modal.style.display = "none"
     }
-
-    span.onclick = function() {
-      modal.style.display = "none";
-    }
-
-    window.onclick = function(event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
-
+  }
 
 })();
