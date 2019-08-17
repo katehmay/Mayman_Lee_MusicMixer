@@ -1,10 +1,11 @@
 (() => {
-  // Drag and Drop
+  // Drag and Drop 
   console.log('working!');
 
   const dropZones = document.querySelectorAll('.drop-zone');
 
-  let draggablePieces = document.querySelectorAll("img");
+  let draggablePieces = document.querySelectorAll("img"),
+      resetBut = document.querySelector(".ss-button");
 
 
   draggablePieces.forEach(piece => {
@@ -27,11 +28,11 @@
 
           let dragElement = e.dataTransfer.getData("text/plain");
           console.log('you dragged: ', dragElement);
-
+          
           if ( this.childElementCount == 1 ) { return; }
 
           let audioKey = document.querySelector(`#${dragElement}`).dataset.key;
-
+          
           let currentAudioClip = document.querySelector((`audio[data-key="${audioKey}"]`));
           currentAudioClip.play();
           currentAudioClip.loop = "true";
@@ -41,45 +42,15 @@
     });
   });
 
-  function logKeyCode() {
-    console.log(this.dataset.key);
+  function resetRound(e) {
+    console.log("reset is working!");
+    e.preventDefault();
 
-    let currentAudioClip = document.querySelector(`audio[data-key="${this.dataset.key}"]`);
-    currentAudioClip.play()
+    draggablePieces.forEach(piece => piece.classList.add('dropped'));
   }
 
-    musicElements.forEach(element => {
-      element.addEventListener("click", logKeyCode);
-
-    });
-  });
+  resetBut.addEventListener("click", resetRound);
 
 
-  // debugger;
-//   function logKeyCode() {
-//     console.log(this.dataset.key);
 
-//     let currentAudioClip = document.querySelector(`audio[data-key="${this.dataset.key}"]`);
-//     currentAudioClip.play()
-
-//   }
-
-//     musicElements.forEach(element => {
-//       element.addEventListener("click", logKeyCode);
-
-// });
-
-
-  // debugger;
-//   function logKeyCode() {
-//     console.log(this.dataset.key);
-
-//     let currentAudioClip = document.querySelector(`audio[data-key="${this.dataset.key}"]`);
-//     currentAudioClip.play()
-
-//   }
-
-//     musicElements.forEach(element => {
-//       element.addEventListener("click", logKeyCode);
-
-// });
+})();
