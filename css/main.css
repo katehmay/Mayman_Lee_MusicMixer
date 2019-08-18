@@ -148,54 +148,6 @@ h3{
   padding: 5px;
 }
 
-/*  HELP MODAL OVERLAY STYLING  */
-
-#modal-button{
-  float:right;
-  margin-right:50px;
-  margin-bottom:20px;
-}
-
-#modal-button img:hover{
-  -webkit-transition-duration: 0.6s;
-  -webkit-transition-timing-function: ease-in-out;
-  transition-duration: 0.6s;
-  transition-timing-function: ease-in-out;
-  opacity:0.7;
-}
-
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 7;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.4);
-}
-
-.modal-content {
-  background-color:rgba(254,254,254,0.9);
-  margin: 15% auto;
-  padding: 50px;
-  border: 1px solid #888;
-  width: 60%;
-} 
-
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 30px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: purple;
-  text-decoration: none;
-}
-
 /*  RESET BUTTON STYLING  */
 
 #reset{
@@ -225,3 +177,70 @@ h3{
   transition-timing-function: ease-in-out;
   opacity:1;
 }
+
+
+
+/*  HELP MODAL OVERLAY STYLING  */
+
+#modal-button{
+  float:right;
+  margin-right:50px;
+  margin-bottom:20px;
+}
+
+#modal-button img:hover{
+  -webkit-transition-duration: 0.6s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-duration: 0.6s;
+  transition-timing-function: ease-in-out;
+  opacity:0.7;
+}
+
+.modalDialog {
+  background-color:rgba(254,254,254,0.9);
+  margin: 15% auto;
+  width: 60%;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
+
+.modalDialog > div {
+	width: 600px;
+	position: relative;
+	margin: 10% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+}
+
+.close {
+  background-color:rgb(95,27,82,0.5);
+	color: #FFFFFF;
+	line-height: 25px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 24px;
+	text-decoration: none;
+}
+
+.close:hover {
+  background-color:rgb(95,27,82,1);
+  -webkit-transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+ }
