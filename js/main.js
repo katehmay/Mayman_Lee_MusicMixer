@@ -43,12 +43,8 @@
   });
 
   function resetRound(e) {
-    console.log("reset is working!");
-    e.preventDefault();
-
-    draggablePieces.forEach(piece => piece.classList.add('dropped'));
+			dropZones.forEach(dropZone =>  dropZone.innerHTML = "") 
   }
-
   resetBut.addEventListener("click", resetRound);
 
 

@@ -39,7 +39,7 @@ h3{
 }
 
 #wrapper{
-  margin:0 auto;
+  margin: 0 auto;
   text-align:center;
   width:100% !important;
   overflow: hidden;
@@ -55,7 +55,7 @@ h3{
   background-image:url(../images/bg-ferns.png);
   background-size:contain;
   background-repeat: no-repeat;
-  background size:463px 385px;
+  background-size: 463px 385px;
 }
 
 .left-mermaid{
