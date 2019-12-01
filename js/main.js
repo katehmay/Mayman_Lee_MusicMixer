@@ -46,7 +46,7 @@
     console.log("reset is working!");
     e.preventDefault();
 
-    draggablePieces.forEach(piece => piece.classList.add('dropped'));
+    dropZones.forEach(zone => zone.innerHTML = "");
   }
 
   resetBut.addEventListener("click", resetRound);
